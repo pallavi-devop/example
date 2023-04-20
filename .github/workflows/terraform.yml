@@ -1,3 +1,13 @@
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check services healthiness
+      uses: pallavi-devop/example@main
+      with:
+          timeout: '60'
+          workdir: 'src'
+
 # This workflow installs the latest version of Terraform CLI and configures the Terraform CLI configuration file
 # with an API token for Terraform Cloud (app.terraform.io). On pull request events, this workflow will run
 # `terraform init`, `terraform fmt`, and `terraform plan` (speculative plan via Terraform Cloud). On push events
@@ -91,3 +101,5 @@ jobs:
     - name: Terraform Apply
      # if: github.ref == 'refs/heads/"main"' && github.event_name == 'push'
       run: terraform apply -auto-approve # -input=false
+      
+      

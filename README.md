@@ -1,15 +1,15 @@
 # runing nginx image in container 
- In this provider is Docker 
+<h4> In this provider is Docker </h4>
  provider "docker" {}
 
-and i use nginx image 
+<h4>and i use nginx image </h4>
 
 resource "docker_image" "nginx" {
   name         = "nginx"
   keep_locally = false
 }
 
-after thi running this image on docker container 
+ <h4> after this running this image on docker container </h4>
 
 resource "docker_container" "nginx" {
   image = docker_image.nginx.image_id

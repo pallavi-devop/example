@@ -22,4 +22,6 @@ ports {
     external = 8000
   }
   
-  
+ <h4>after all configuration select terraform pipeline from github action  </h4>
+ 
+ <h5> in pipeline nginx image is downloaded and this is running on docker container</h5>
